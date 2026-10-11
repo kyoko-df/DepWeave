@@ -1,0 +1,10 @@
+[package]
+name = "depweave-engine"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[dependencies]
+serde_json = "=1.0.143"
+sha2 = "=0.10.9"
+libc = "=0.2.175"

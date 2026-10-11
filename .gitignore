@@ -1,0 +1,6 @@
+node_modules/
+dist/
+native/target/
+.work/
+.DS_Store
+/docs/

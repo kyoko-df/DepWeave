@@ -1,0 +1,33 @@
+{
+  "name": "depweave",
+  "version": "0.1.0-alpha.1",
+  "description": "Keep npm and Yarn. Share dependency file data with APFS copy-on-write.",
+  "type": "module",
+  "bin": {
+    "depweave": "bin/depweave.mjs"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "native/target/release/depweave-engine",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "os": [
+    "darwin"
+  ],
+  "scripts": {
+    "build": "tsc && cargo build --manifest-path native/Cargo.toml --release --locked",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --test-concurrency=1 tests/*.test.mjs",
+    "validate": "node scripts/validate.mjs",
+    "validate:providers": "node scripts/validate-providers.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "22.18.6",
+    "typescript": "5.9.3"
+  },
+  "license": "MIT"
+}
